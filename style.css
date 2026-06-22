@@ -1,0 +1,356 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:#f8fafc;
+    color:#111827;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:1rem 1.5rem;
+    border-bottom:1px solid rgba(0,0,0,.1);
+}
+
+.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:1rem;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:.5rem;
+}
+
+.peak{
+    font-size:1.8rem;
+    color:purple;
+}
+
+.logo h1{
+    font-size:1.8rem;
+}
+
+.nav-tasks{
+    display:flex;
+    align-items:center;
+}
+
+.number{
+    background:purple;
+    color:white;
+    padding:.2rem .6rem;
+    border-radius:999px;
+    font-size:.9rem;
+}
+
+.clear button{
+    border:none;
+    outline:none;
+    padding:.8rem 1rem;
+    background:red;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.clear button:hover{
+    transform:translateY(-2px);
+}
+
+.ham{
+    display:none;
+}
+
+/* MAIN */
+
+main{
+    width:100%;
+    padding:2rem 1.5rem;
+    display:flex;
+    justify-content:center;
+}
+
+.input{
+    width:100%;
+    max-width:900px;
+}
+
+.box{
+    display:flex;
+    gap:1rem;
+}
+
+.box input{
+    flex:1;
+    min-width:0;
+    padding:1rem;
+    border:1px solid rgba(0,0,0,.2);
+    border-radius:12px;
+    font-size:1rem;
+    outline:none;
+}
+
+.box input:focus{
+    border-color:rgb(71,191,231);
+}
+
+.box button{
+    padding:1rem 1.5rem;
+    border:none;
+    border-radius:12px;
+    background:rgb(71,191,231);
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+    white-space:nowrap;
+}
+
+.box button:hover{
+    background:rgb(16,147,190);
+    transform:translateY(-3px);
+}
+
+/* SECTION */
+
+section{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    padding:1rem 1.5rem 3rem;
+}
+
+.title{
+    border-bottom:1px solid rgba(0,0,0,.15);
+    padding-bottom:.8rem;
+}
+
+.title h1{
+    font-size:2rem;
+}
+
+.tasks{
+    padding-top:2rem;
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+
+/* TASK CARD */
+
+.task-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1rem 1.2rem;
+    background:white;
+    border-radius:14px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.task-box:hover{
+    transform:translateY(-2px);
+}
+
+.task-title{
+    word-break:break-word;
+}
+
+.task-box.completed{
+    opacity:.6;
+    background:#d1d5db;
+}
+
+.task-box.completed h3{
+    text-decoration:line-through;
+}
+
+.options{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    font-size:1.2rem;
+}
+
+.tick,
+.edit,
+.delete{
+    padding:.5rem;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.tick{
+    background:lightgreen;
+}
+
+.edit{
+    background:rgb(238,165,238);
+}
+
+.delete{
+    background:red;
+    color:white;
+}
+
+/* EMPTY STATE */
+
+.nothing{
+    padding:5rem 1rem;
+}
+
+.nothing span{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:1rem;
+    flex-wrap:wrap;
+}
+
+.person{
+    font-size:2rem;
+}
+
+.nothing h1{
+    font-size:1.2rem;
+    text-align:center;
+}
+
+/* TABLET */
+
+@media(max-width:1024px){
+
+    .logo h1{
+        font-size:1.5rem;
+    }
+
+    .title h1{
+        font-size:1.8rem;
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    nav{
+        padding:1rem;
+    }
+
+    .top{
+        flex-wrap:wrap;
+        justify-content:center;
+        text-align:center;
+    }
+
+    .ham{
+        display:block;
+        font-size:1.4rem;
+    }
+
+    .clear{
+        width:100%;
+    }
+
+    .clear button{
+        width:100%;
+    }
+
+    main{
+        padding:1.5rem 1rem;
+    }
+
+    .box{
+        flex-direction:column;
+    }
+
+    .box button{
+        width:100%;
+    }
+
+    section{
+        padding:1rem;
+    }
+
+    .task-box{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:1rem;
+    }
+
+    .options{
+        width:100%;
+        justify-content:flex-end;
+    }
+
+    .title h1{
+        font-size:1.5rem;
+    }
+}
+
+/* SMALL PHONES */
+
+@media(max-width:480px){
+
+    .logo h1{
+        font-size:1.3rem;
+    }
+
+    .peak{
+        font-size:1.4rem;
+    }
+
+    .box input{
+        padding:.9rem;
+    }
+
+    .box button{
+        padding:.9rem;
+    }
+
+    .task-box{
+        padding:1rem;
+    }
+
+    .options{
+        font-size:1rem;
+    }
+
+    .nothing h1{
+        font-size:1rem;
+    }
+}
+
+/* LARGE SCREENS */
+
+@media(min-width:1440px){
+
+    section{
+        max-width:1400px;
+    }
+
+    .box input{
+        font-size:1.1rem;
+    }
+
+    .title h1{
+        font-size:2.3rem;
+    }
+}
